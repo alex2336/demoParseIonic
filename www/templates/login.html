@@ -1,0 +1,30 @@
+<ion-view title="SIGN IN">
+<ion-content padding="true">
+<div class="container">
+	
+	<div class="col-md-12">
+		<div class="login-panel panel panel-default">
+			<div class="panel-heading">
+			</div>
+			<div class="panel-body">
+				<form role="form" ng-submit="login()" class="ng-pristine ng-valid" type="post">
+					<fieldset>
+						<div class="form-group">
+							<input class="form-control ng-pristine ng-valid ng-valid-email" placeholder="E-mail" name="email" type="email" ng-model="user.email" autofocus="" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<input class="form-control ng-pristine ng-valid" placeholder="Password" name="password" type="password" ng-model="user.password" value="">
+						</div>
+						<div class="form-group">
+							<label>
+							</label>
+						</div>
+						<button type="submit" class="btn btn-lg btn-success btn-block">Sign In
+						</button></fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</ion-content>
+</ion-view>
