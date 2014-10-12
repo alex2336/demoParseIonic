@@ -1,23 +1,26 @@
 
-angular.module('demo', ['ionic', 'demo.services', 'demo.controllers'])
+var app = angular.module('demo', ['ionic', 'demo.services', 'demo.controllers'])
+
+app.run(function(){
+	Parse.initialize("nKrL0vJaS2mLjgbs6KJHQRuWtVXXgDRBPFVactl3","Y5iiaMlmDCDnK5Q1Hq8BO0EzTII8O5sCBwAghvy1");
+});
 
 
-.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
 
 	$stateProvider
 
 
 	.state('signin', {
 		url: '/signin',
-		controller: ''
+		controller: 'SignCtrl',
 		templateUrl: 'templates/login.html'
 	})
 
-	.state('main', {
-		url: '/main',
-		views: {
-				templateUrl: 'templates/main.html'
-		}
+	.state('note', {
+		url: '/note',
+		controller: 'NoteCtrl',
+		templateUrl: 'templates/main.html'
 	});
 
 
